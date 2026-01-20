@@ -292,10 +292,10 @@ nav a {
   overflow: hidden;
   position: relative;
   width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
   background: #f9fbff;
-  padding: 20px 0;
+  padding: 50px 0;      /* ⬅ THIS MAKES THE SIZE VISIBLE */
 }
 
 .partners-track {
@@ -305,18 +305,15 @@ nav a {
 }
 
 .partners-track img {
-  height: 60px;
+  height: 140px;          /* ⬅ bigger logo */
+  padding: 40px 60px;     /* ⬅ BIGGER box */
+  margin-right: 60px;
+  background: #ffffff;
+  border-radius: 22px;
   object-fit: contain;
-  margin-right: 40px;
-  padding: 18px 0;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 14px;
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.15),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-  user-select: none;
-  pointer-events: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    0 14px 34px rgba(0, 0, 0, 0.14),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .partners-track img:last-child {
@@ -324,7 +321,7 @@ nav a {
 }
 
 .partners-track img:hover {
-  transform: translateY(-6px) scale(1.05);
+  transform: translateY(-4px);
   box-shadow:
     0 14px 30px rgba(0, 0, 0, 0.25),
     inset 0 0 0 1px rgba(255, 255, 255, 0.6);
@@ -504,23 +501,25 @@ footer {
 .trust-slider {
   overflow: hidden;
   width: 100%;
+  padding: 40px 0;   /* ⬅ allows bigger boxes to show */
 }
 
 /* Horizontal movement */
 .trust-track {
   display: flex;
-  gap: 60px;
+  gap: 80px;
   animation: trustSlide 40s linear infinite;
   align-items: center;
 }
 
 /* Individual logo container */
 .trust-logo {
-  width: 160px;
-  height: 90px;
+  width: 260px;          /* ⬅ wider */
+  height: 150px;         /* ⬅ taller */
+  padding: 24px;         /* ⬅ more space inside */
   background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-radius: 22px;   /* ⬅ smoother corners */
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,19 +536,18 @@ footer {
 
 /* Logo image */
 .trust-logo img {
-  max-width: 120px;
-  max-height: 60px;
+  max-width: 200px;   /* BIGGER LOGO */
+  max-height: 110px;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  filter: none;
-  opacity: 0.85;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
 }
 
 .trust-logo:hover img {
-  filter: grayscale(0%);
+  transform: scale(1.05); /* gentle, no blur */
   opacity: 1;
-  transform: scale(1.25);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Horizontal sliding */
@@ -587,14 +585,12 @@ footer {
     gap: 10px;
   }
 }
-
-.logo-img1 {
-  height: 54px;
-  width: 108px;
-  display: block;
-}
-
-
 html {
   scroll-behavior: smooth;
+}
+
+.logo-img1 {
+    height: 54px;
+    width: 108px;
+    display: block;
 }
